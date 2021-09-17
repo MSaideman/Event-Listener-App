@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Event:</h3>
+
+    <form class="form new-pevent-form">
+      <div class="form-group">
+        <label for="pevent-name">Event name:</label>
+        <input class="form-input" type="text" id="pevent-name" name="pevent-name" />
+      </div>
+      {{!-- I stop Funding label --}}
+      {{!-- <div class="form-group">
+        <label for="project-funding">needed funding ($):</label>
+        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      </div> --}}
+      <div class="form-group">
+        <label for="pevent-desc">description:</label>
+        <textarea class="form-input" id="pevent-desc" name="pevent-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if pevents.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Events:</h3>
+
+    {{#each pevents as |pevent|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{pevent.id}}">{{pevent.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{pevent.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
