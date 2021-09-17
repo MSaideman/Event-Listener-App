@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
 // Serialize data so the template can read it
-const pevents = peventData.map((project) => project.get({ plain: true }));
+const pevents = peventData.map((project) => pevent.get({ plain: true }));
 
   // Pass serialized data and session flag into template
   res.render('homepage', { 
@@ -38,10 +38,10 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = peventData.get({ plain: true });
+    const pevent = peventData.get({ plain: true });
 
     res.render('project', {
-      ...project,
+      ...pevent,
       logged_in: req.session.logged_in
     });
   } catch (err) {
