@@ -13,9 +13,10 @@ router.get('/', async (req, res) => {
         },
       ],
     });
+    
 
 // Serialize data so the template can read it
-const pevents = peventData.map((project) => pevent.get({ plain: true }));
+const pevents = peventData.map((pevent) => pevent.get({ plain: true }));
 
   // Pass serialized data and session flag into template
   res.render('homepage', { 
@@ -82,5 +83,15 @@ router.get('/profile', withAuth, async (req, res) => {
   });
 
 
-
+  router.get('/create', withAuth, async (req, res) => {
+    try {
+      res.render('create', {
+        loggedIn: req.session.loggedIn,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
 module.exports = router;
