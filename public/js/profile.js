@@ -22,26 +22,32 @@ const newFormHandler = async (event) => {
   }
 };
 
-// const delButtonHandler = async (event) => {
-//   if (event.target.hasAttribute('data-id')) {
-//     const id = event.target.getAttribute('data-id');
+const delButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
 
-//     const response = await fetch(`/api/pevents/${id}`, {
-//       method: 'DELETE',
-//     });
+    const response = await fetch(`/api/pevents/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    body: JSON.stringify({
+      id: id
+    }),
+    });
 
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to delete event');
-//     }
-//   }
-// };
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete event');
+    }
+  }
+};
 
 document
   .querySelector('#create-btn')
-  .addEventListener('click', newFormHandler);
+  .addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('#delete-btn')
-//   .addEventListener('submit', delButtonHandler);
+document
+  .querySelector('#delete-btn')
+  .addEventListener('click', delButtonHandler);

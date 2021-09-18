@@ -6,7 +6,7 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+    <h3>create new event:</h3>
 
     <form class="form new-project-form">
       <div class="form-group">
@@ -16,6 +16,11 @@
       <div class="form-group">
         <label for="project-desc">event description:</label>
         <textarea class="form-input" id="content" name="project-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-date">date of event:</label>
+
+        <input type="date" id="project-date" name="project-date">
       </div>
       <div class="form-group">
         <button type="submit" id="create-btn" class="btn btn-primary">Create</button>
@@ -33,7 +38,7 @@
         <h4><a href="/project/{{pevent.id}}">{{pevent.name}}</a></h4>
       </div>
       {{!-- <div class="col-md-4">
-        <button type="submit" id="delete-btn" class="btn btn-sm btn-danger" data-id="{{pevent.id}}">DELETE</button>
+        <button id="delete-btn" class="btn btn-sm btn-danger" data-id="{{pevent.id}}">DELETE</button>
       </div> --}}
     </div>
     {{/each}}

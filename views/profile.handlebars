@@ -32,16 +32,16 @@
       <div class="col-md-8">
         <h4>{{pevent.name}}</a></h4>
       </div>
-      {{!-- <div class="col-md-4">
-        <button type="submit" id="delete-btn" href="/project/{{pevent.id}}" class="btn btn-sm btn-danger">DELETE</button>
-      </div> --}}
+      <div class="col-md-4">
+        <button id="delete-btn" href="/project/{{pevent.id}}" class="btn btn-sm btn-danger">DELETE</button>
+      </div>
     </div>
     {{/each}}
   </div>
   {{/if}}
 </div>
 
-<a type="click" class="m-8 " id="create-btn" href="/create">create new event</a>
+<a type="submit" class="m-8 " id="create-btn" href="/create">create new event</a>
 
 <script src="./js/profile.js"></script>
 
