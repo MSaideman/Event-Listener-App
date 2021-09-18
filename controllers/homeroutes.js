@@ -82,5 +82,15 @@ router.get('/profile', withAuth, async (req, res) => {
   });
 
 
-
+  router.get('/create', withAuth, async (req, res) => {
+    try {
+      res.render('create', {
+        loggedIn: req.session.loggedIn,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
 module.exports = router;
