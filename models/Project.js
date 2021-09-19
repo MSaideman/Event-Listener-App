@@ -18,6 +18,9 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
+    Event_Place: {
+      type: DataTypes.STRING,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
