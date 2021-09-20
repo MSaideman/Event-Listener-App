@@ -4,33 +4,44 @@
   </div>
 </div>
 
-{{!-- <div class="row mt-4">
+<div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Event:</h3>
-
-    <form class="form new-pevent-form">
+    <h3>Create a New Project:</h3>
+  {{!-- this is for  event or project Create page and we called by class on java script  --}}
+    <form class="form new-project-form">
       <div class="form-group">
-        <label for="pevent-name">Event name:</label>
-        <input class="form-input" type="text" id="pevent-name" name="pevent-name" />
+        <label for="project-name">Event Name:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div>
+      {{!-- this for fundding /Event_Place div on create page  --}}
+      <div class="form-group">
+        <label for="project-EventPlace">Event_Place:</label>
+        <input class="form-input" type="text" id="project-EventPlace" name="project-EventPlace" />
       </div>
       <div class="form-group">
-        <label for="pevent-desc">description:</label>
-        <textarea class="form-input" id="pevent-desc" name="pevent-desc"></textarea>
+        <label for="project-desc">description:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-EventPlace">Time_start_event:</label>
+        <input class="form-input" type="date" id="project-Eventdate" name="project-Eventdate" />
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
+      {{!-- if want add any form here before Creat btn--}}
+      
     </form>
-  </div> --}}
+  </div>
 
-  {{#if pevents.length}}
+  {{#if projects.length}}
   <div class="col-md-6 project-list">
-    <h3>my events:</h3>
+    <h3>Current Projects:</h3>
 
-    {{#each pevents as |pevent|}}
+    {{#each projects as |project|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4>{{pevent.name}}</a></h4>
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button id="delete-btn" href="/project/{{pevent.id}}" class="btn btn-sm btn-danger">DELETE</button>
@@ -41,7 +52,4 @@
   {{/if}}
 </div>
 
-<a type="submit" class="m-8 " id="create-btn" href="/create">create new event</a>
-
 <script src="./js/profile.js"></script>
-
