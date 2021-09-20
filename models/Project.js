@@ -18,10 +18,17 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
+    Event_Place: {
+      type: DataTypes.STRING,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+    },
+    Time_start_event: {
+      type: DataTypes.DATE,
+      allowNull: false,
     },
    
     user_id: {

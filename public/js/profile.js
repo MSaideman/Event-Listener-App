@@ -2,13 +2,14 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
+  const Event_Place = document.querySelector('#project-EventPlace').value.trim();
   const description = document.querySelector('#project-desc').value.trim();
+  const Time_start_event = document.querySelector('#project-Eventdate').value;
 
-  if (name && description) {
+  if (name && Event_Place && description) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, description }),
+      body: JSON.stringify({ name,Event_Place, description,Time_start_event }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -17,7 +18,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create event');
     }
   }
 };
@@ -33,7 +34,7 @@ const delButtonHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to delete event');
     }
   }
 };
