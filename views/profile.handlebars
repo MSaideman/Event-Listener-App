@@ -6,16 +6,16 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+    <h3>create new event:</h3>
   {{!-- this is for  event or project Create page and we called by class on java script  --}}
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">Event Name:</label>
+        <label for="project-name">event name:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       {{!-- this for fundding /Event_Place div on create page  --}}
       <div class="form-group">
-        <label for="project-EventPlace">Event_Place:</label>
+        <label for="project-EventPlace">event location:</label>
         <input class="form-input" type="text" id="project-EventPlace" name="project-EventPlace" />
       </div>
       <div class="form-group">
@@ -23,11 +23,11 @@
         <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
       </div>
       <div class="form-group">
-        <label for="project-EventPlace">Time_start_event:</label>
+        <label for="project-EventPlace">event date:</label>
         <input class="form-input" type="date" id="project-Eventdate" name="project-Eventdate" />
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" id="create-btn"class="btn btn-primary">create</button>
       </div>
       {{!-- if want add any form here before Creat btn--}}
       
@@ -36,7 +36,7 @@
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+    <h3>current events:</h3>
 
     {{#each projects as |project|}}
     <div class="row mb-2">
@@ -44,7 +44,7 @@
         <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button id="delete-btn" href="/project/{{pevent.id}}" class="btn btn-sm btn-danger">DELETE</button>
+        <button id="delete-btn" href="/project/{{project.id}}" class="btn btn-sm btn-danger">DELETE</button>
       </div>
     </div>
     {{/each}}
