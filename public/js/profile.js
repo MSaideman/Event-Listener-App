@@ -1,15 +1,18 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const Event_Place = document.querySelector('#project-EventPlace').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
-  const Time_start_event = document.querySelector('#project-Eventdate').value;
+  const name = document.querySelector('#title').value.trim();
+  // const needed_funding = document.querySelector('#project-funding').value.trim();
+  const description = document.querySelector('#content').value.trim();
+  const date_of_event = document.querySelector('#project-date').value.trim();
 
-  if (name && Event_Place && description) {
-    const response = await fetch(`/api/projects`, {
+  if (name && description && date_of_event) {
+    const response = await fetch(`/api/pevents`, {
       method: 'POST',
-      body: JSON.stringify({ name,Event_Place, description,Time_start_event }),
+      body: JSON.stringify({ 
+        name: name, 
+        description: description,
+        date_of_event: date_of_event }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -23,26 +26,32 @@ const newFormHandler = async (event) => {
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute('data-id')) {
+//     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
-      method: 'DELETE',
-    });
+//     const response = await fetch(`/api/pevents/${id}`, {
+//       method: 'DELETE',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//     body: JSON.stringify({
+//       id: id
+//     }),
+//     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete event');
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to delete event');
+//     }
+//   }
+// };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('#create-btn')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('#delete-btn')
+//   .addEventListener('click', delButtonHandler);

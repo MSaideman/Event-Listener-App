@@ -26,11 +26,6 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    Time_start_event: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-   
     user_id: {
       type: DataTypes.INTEGER,
       references: {
