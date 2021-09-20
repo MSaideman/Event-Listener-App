@@ -7,7 +7,7 @@ const newFormHandler = async (event) => {
     .value.trim();
   const description = document.querySelector("#project-desc").value.trim();
   const Time_start_event = document.querySelector("#project-Eventdate").value;
-
+  
   if (name && Event_Place && description) {
     const response = await fetch(`/api/projects`, {
       method: "POST",
@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
         name: name,
         Event_Place: Event_Place,
         description: description,
-        Time_start_event: Time_start_event,
+        Time_start_event: Time_start_event
       }),
       headers: {
         "Content-Type": "application/json",
@@ -50,6 +50,6 @@ document
   .querySelector(".new-project-form")
   .addEventListener("submit", newFormHandler);
 
-// document
-//   .querySelector(".project-list")
-//   .addEventListener("click", delButtonHandler);
+document
+  .querySelector(".project-list")
+  .addEventListener("click", delButtonHandler);
