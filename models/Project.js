@@ -26,6 +26,10 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    // Time_start_event: {
+    //   type: DataTypes.DATE,
+    //   allowNull: false,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -39,7 +43,7 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'project'
   }
 );
 

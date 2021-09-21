@@ -9,7 +9,7 @@ const newFormHandler = async (event) => {
   const Time_start_event = document.querySelector("#project-Eventdate").value;
   
   if (name && Event_Place && description) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/projects/`, {
       method: "POST",
       body: JSON.stringify({
         name: name,
