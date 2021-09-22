@@ -1,37 +1,44 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{name}} 🤝</h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>create new event:</h3>
+    <h3>Create a New Event:</h3>
   {{!-- this is for  event or project Create page and we called by class on java script  --}}
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">event name:</label>
+        <label for="project-name">Event Name:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       {{!-- this for fundding /Event_Place div on create page  --}}
       <div class="form-group">
-        <label for="project-EventPlace">event location:</label>
+        <label for="project-EventPlace">Event Place:</label>
         <input class="form-input" type="text" id="project-EventPlace" name="project-EventPlace" />
       </div>
       <div class="form-group">
-        <label for="project-desc">description:</label>
+        <label for="project-desc">Description:</label>
         <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
       </div>
       <div class="form-group">
-        <label for="project-EventPlace">event date:</label>
-        <input class="form-input" type="date" id="project-Eventdate" name="project-Eventdate" />
+        <label for="project-Day-event-start">Day_event_start:</label>
+        <input class="form-input" type="date" id="project-Day-event-start" name="project-Day-event-start" />
+        {{!-- <label for="project-Time-event-start">Time_event_start:</label> --}}
+        {{!-- <input class="form-input" type="time" id="project-Time-event-start" name="project-Time-event-start" /> --}}
+      
       </div>
-        <div class="form-group">
-        <button type="submit" class="btn btn-primary">create</button>
+       <div class="form-group">
+        <label for="project-Day_event_end">Day_event_end:</label>
+        <input class="form-input" type="date" id="project-Day-event-end" name="project-Day_event_end" />
+        {{!-- <label for="project-Time-event-end">Time_event_end:</label> --}}
+        {{!-- <input class="form-input" type="time" id="project-Time-event-end" name="project-Time-event-end" /> --}}
+      
       </div>
-      {{!-- <div class="form-group">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div> --}}
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
       {{!-- if want add any form here before Creat btn--}}
       
     </form>
@@ -39,7 +46,7 @@
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
-    <h3>current events:</h3>
+    <h3>Current Events:</h3>
 
     {{#each projects as |project|}}
     <div class="row mb-2">
@@ -47,7 +54,7 @@
         <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button id="delete-btn" href="/project/{{project.id}}" class="btn btn-sm btn-danger">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
