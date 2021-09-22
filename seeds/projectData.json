@@ -1,7 +1,7 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+    "name": "Best Concert Ever",
+    "description": "Bring your friends and listen to the latest and greatest in Rock music",
     "Event_Place": "california",
     "Day_start_event": "2021-09-10",
     "Day_event_end":"2021-09-11"
