@@ -1,17 +1,23 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "name": "Music Relax",
+    "Event_Place": "California",
+    "description": "have great day and fun time with nice music.",
+    "Day_start_event":"09/25/2021",
+    "Day_event_end":"09/28/2021"
   },
   {
-    "name": "The Ultimate Tech Quiz",
+    "name": "The sport Day",
+    "Event_Place": "Arezona",
     "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "Day_start_event":"09/25/2021",
+    "Day_event_end":"09/28/2021"
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "name": "event online games",
+    "Event_Place": "elacjon",
+    "description": "comming soon .",
+    "Day_start_event":"09/25/2021",
+    "Day_event_end":"09/28/2021"
   }
 ]
