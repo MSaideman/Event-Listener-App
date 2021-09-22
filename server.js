@@ -39,6 +39,6 @@ app.use(routes);
 
 app.set("port", PORT);
 // this false its for to do no change and true do any change on database as key
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
