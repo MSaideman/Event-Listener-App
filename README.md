@@ -1,6 +1,6 @@
 # EventListener
 
-<img width="497" alt="Screen Shot 2021-09-23 at 2 12 57 PM" src="https://user-images.githubusercontent.com/82477037/134577201-f80c31e0-e933-4edd-996c-ff9a88742a06.png">
+<img width="490" alt="Screen Shot 2021-09-23 at 2 14 07 PM" src="https://user-images.githubusercontent.com/82477037/134577324-61f13371-42f5-4a07-8030-db1b898227fd.png">
 
 - Heroku: https://serene-basin-19147.herokuapp.com/
 
