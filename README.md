@@ -1,7 +1,7 @@
 # EventListener
 
-Github Repo: https://github.com/MSaideman/project-2
-Heroku: https://serene-basin-19147.herokuapp.com/
+- Github Repo: https://github.com/MSaideman/project-2
+- Heroku: https://serene-basin-19147.herokuapp.com/
 
 ## Description
 
