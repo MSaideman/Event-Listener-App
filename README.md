@@ -59,4 +59,4 @@ This project is licensed under the MIT license.
 
 ## Questions
 
-If you have any questions about this repo, feel free to contact me at mbsaideman@gmail.com, oscarif04@gmail.com, and oliv.code999@gmail.com. You can find more of my work at [MSaideman](github.com/Msaideman), [oscarif04](github.com/oscarif04), [oliversh99](github.com/oliversh99).
+If you have any questions about this repo, feel free to contact any of our tema members at mbsaideman@gmail.com, oscarif04@gmail.com, and oliv.code999@gmail.com. You can find more of our work at [MSaideman](github.com/Msaideman), [oscarif04](github.com/oscarif04), [oliversh99](github.com/oliversh99).
