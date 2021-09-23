@@ -2,11 +2,12 @@
   <h2>{{name}}</h2>
   <p>{{{get_emoji}}}</p>
   <p>{{description}}</p>
- <div> <p>Event Starts on {{ Day_start_event}} Start Time at</p></div>
- <div> <p>Event Ends on {{ Day_event_ends}} End Time at</p></div>
-  <p>This Evnet is Created by {{user.name}} on {{format_date date_created}}</p>
+ <div> <p>Event Starts on {{Day_start_event}}</p></div>
+ <div> <p>Event Ends on {{Day_event_ends}}</p></div>
+  <p>This event was created by {{user.name}} on {{format_date date_created}}</p>
 
   <p>
     <button class="btn btn-primary">Attend this Event!</button>
+    <a id="emailHost-btn" href=“mailto:inserthost@gmail.com?Subject=I want to attend your event&body=Can I attend?“>Send Host an Email</a>
   </p>
 </div>
