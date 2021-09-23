@@ -49,8 +49,8 @@ Extensions on Heroku:
 
 ## Usage
 
-node server.js on local host
-open heroku app to run on server
+- node server.js on local host
+- open heroku app to run on server
 
 ## License
 
