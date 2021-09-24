@@ -7,15 +7,18 @@
   <title>Make My Event!</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style2.css">
+
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="">✨🥳✨🥳✨</span>
+        {{!-- <span role="img" aria-label="">✨🥳✨🥳✨</span> --}}
         <a href="/">Make My Event ✨🥳✨🥳✨</a>
       </h1>
+
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
@@ -28,12 +31,26 @@
         {{/if}}
       </nav>
     </header>
+    {{!-- <br> --}}
+    <div class="hero-section">
+  <div class="hero-section-text">
+    {{!-- <h1><a href="/">Make My Event</a></h1> --}}
+    <h5>subtitle about anything you like</h5>
+  </div>
+</div>
+
+
+
+     {{!-- <div><h3>✨🥳✨🥳✨🏈✨⚽✨🎸✨🥁✨🎹✨🎺✨🎂✨🎁✨🎉✨🎅✨🎃✨🥳✨🥳✨</h3></div>  --}}
+
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      
+     <div><h4>✨🥳✨🥳✨🏈✨⚽✨🎸✨🥁✨🎹✨🎺✨🎂✨🎁✨🎉✨🎅✨🎃
+       ✨🏈✨⚽✨🎸✨🥁✨🎹✨🎺✨🎂✨🎁✨🎉✨🎅✨🎃✨🏈✨⚽✨🎸✨
+       🥁✨🎹✨🎺✨🎂✨🥳✨🥳</h4></div> 
     </footer>
   </div>
 

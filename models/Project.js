@@ -34,7 +34,7 @@ Project.init(
       type: DataTypes.DATEONLY,
       allowNull: false,
     },
-  
+    
     user_id: {
       type: DataTypes.INTEGER,
       references: {
