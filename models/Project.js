@@ -34,10 +34,6 @@ Project.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    time_of_event: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
