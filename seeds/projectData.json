@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "name": "Music Relax",
     "Event_Place": "California",
     "description": "have great day and fun time with nice music.",
@@ -19,5 +20,12 @@
     "description": "comming soon .",
     "Day_start_event":"09/25/2021",
     "Day_event_end":"09/28/2021"
+=======
+    "name": "Best Concert Ever",
+    "description": "Bring your friends and listen to the latest and greatest in Rock music",
+    "Event_Place": "california",
+    "Day_start_event": "2021-09-10",
+    "Day_event_end":"2021-09-11"
+>>>>>>> 8a27d7b3df01b57e4fdbde7c39b896bcd525f3a1
   }
 ]

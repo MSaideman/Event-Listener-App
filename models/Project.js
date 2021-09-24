@@ -27,14 +27,17 @@ Project.init(
       defaultValue: DataTypes.NOW,
     },
     Day_start_event: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
       allowNull: false,
     },
     Day_event_end: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
       allowNull: false,
     },
+<<<<<<< HEAD
     
+=======
+>>>>>>> 8a27d7b3df01b57e4fdbde7c39b896bcd525f3a1
     user_id: {
       type: DataTypes.INTEGER,
       references: {
