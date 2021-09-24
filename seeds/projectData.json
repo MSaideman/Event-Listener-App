@@ -1,9 +1,31 @@
 [
   {
+<<<<<<< HEAD
+    "name": "Music Relax",
+    "Event_Place": "California",
+    "description": "have great day and fun time with nice music.",
+    "Day_start_event":"09/25/2021",
+    "Day_event_end":"09/28/2021"
+  },
+  {
+    "name": "The sport Day",
+    "Event_Place": "Arezona",
+    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+    "Day_start_event":"09/25/2021",
+    "Day_event_end":"09/28/2021"
+  },
+  {
+    "name": "event online games",
+    "Event_Place": "elacjon",
+    "description": "comming soon .",
+    "Day_start_event":"09/25/2021",
+    "Day_event_end":"09/28/2021"
+=======
     "name": "Best Concert Ever",
     "description": "Bring your friends and listen to the latest and greatest in Rock music",
     "Event_Place": "california",
     "Day_start_event": "2021-09-10",
     "Day_event_end":"2021-09-11"
+>>>>>>> 8a27d7b3df01b57e4fdbde7c39b896bcd525f3a1
   }
 ]
